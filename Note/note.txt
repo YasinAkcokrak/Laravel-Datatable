@@ -1,0 +1,14 @@
+1- First of all you should install yajara ;
+
+  - composer require yajra/laravel-datatables
+
+2- And then go to app.php below the providers fields put the
+
+  - Yajara\DataTables\DataTablesServiceProviders::class
+
+  also aliases fields put the this code
+  - 'DataTables' =>Yajra\DataTables\DataTablesServiceProviders::class
+
+3- include : php artisan vendor:publish --provider="Yajara\DataTables\DataTablesServiceProvider"
+
+4- include : php artisan make:controller DataController
