@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\EmpController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,6 @@ Route::get('/getDataTable','App\Http\Controllers\DataController@getDataInToTable
 Route::get('client',[ClientController::class,'index'])->name('client');
 Route::get('client/create',[ClientController::class,'create'])->name('client.create');
 Route::post('client/store',[ClientController::class,'store'])->name('client.store');
+
+Route::get('employee',[EmpController::class,'index']);
+Route::get('emp/listing',[EmpController::class,'getEmployee'])->name('emp.listing');
